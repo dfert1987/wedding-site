@@ -3,12 +3,8 @@ const admin = require('firebase-admin');
 
 admin.initializeApp();
 
-// // Create and deploy your first functions
-// // https://firebase.google.com/docs/functions/get-started
-//
-exports.helloWorld = functions.https.onRequest((request, response) => {
-    response.send('Hello wedding guests');
-});
+const express = require('express');
+const app = express();
 
 exports.getComments = functions.https.onRequest((req, res) => {
     admin
